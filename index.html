@@ -10,7 +10,6 @@
     <div class="container">
         <!-- Header -->
         <header class="header">
-            <img src="icons/icon128.png" alt="Visualize Database Logo" class="logo">
             <h1 class="title">Visualize Database</h1>
         </header>
 
@@ -52,10 +51,6 @@
             </div>
         </section>
 
-        <!-- CTA Button -->
-        <section class="cta-section">
-            <button class="cta-button" onclick="window.close()">Get Started</button>
-        </section>
     </div>
 
     <!-- Particles Container -->
@@ -91,28 +86,6 @@
         // Run particles animation on load
         window.addEventListener('load', () => {
             setTimeout(createParticles, 500);
-        });
-
-        // Add ripple effect to button
-        document.addEventListener('DOMContentLoaded', () => {
-            const button = document.querySelector('.cta-button');
-            
-            button.addEventListener('click', function(e) {
-                const ripple = document.createElement('span');
-                ripple.className = 'ripple';
-                this.appendChild(ripple);
-                
-                const rect = this.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
-                
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
         });
     </script>
 </body>
